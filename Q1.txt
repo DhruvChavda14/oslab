@@ -1,0 +1,41 @@
+echo "Enter the Number"
+read n
+r=`expr $n % 2`
+if [ $r -eq 0 ]
+then
+echo "$n is Even number"
+else
+echo "$n is Odd number"
+fi
+
+
+echo "Enter the year"
+read y
+b=`expr $y % 4`
+if [ $b -eq 0 ]
+then
+echo "$y is a leap year"
+else
+echo "$y is not a leap year"
+fi
+
+
+echo "Enter a Number"
+read n
+i=`expr $n - 1`
+p=1
+while [ $i -ge 1 ]
+do
+n=`expr $n \* $i`
+i=`expr $i - 1`
+done
+echo "The Factorial of the given Number is $n"
+
+
+echo "Enter Two Numbers"
+read a b
+temp=$a
+a=$b
+b=$temp
+echo "afterswapping"
+echo $a $b
